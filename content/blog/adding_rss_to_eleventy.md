@@ -1,5 +1,5 @@
 ---
-title: Adding rss feed to eleventy base blog
+title: adding rss feed to eleventy base blog
 description: about not needing to do much to make this happen.
 date: 2023-04-08
 tags:
