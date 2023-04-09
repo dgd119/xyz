@@ -18,7 +18,7 @@ permalink: /feed/feed.xml
 	{% set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.url) }}{% endset %}
 	<entry>
 		<title>{{ post.data.title }}</title>
-		<link href="{{ absolutePostUrl }}"/>
+		<link href=""https://www.raymondcamden.com/2023/03/21/adobe-firefly-in-beta""/>
 		<updated>{{ post.date | dateToRfc3339 }}</updated>
 		<id>{{ absolutePostUrl }}</id>
 		<content type="html">{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) }}</content>
