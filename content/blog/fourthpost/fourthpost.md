@@ -1,6 +1,6 @@
 ---
-title: This is my fourth post.
-description: This is a post on My Blog about touchpoints and circling wagons.
+title: here are some flowers
+description: test post to look for images in rss feed
 date: 2023-04-09
 tags: flowers
 thumbnail: ./IMG_6055.png
