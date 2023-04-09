@@ -17,8 +17,8 @@ permalink: /feed/feed.json
 		{%- for post in collections.posts | reverse %}
 		{%- set absolutePostUrl = post.url | htmlBaseUrl(metadata.url) %}
 		{
-			"id": "{{ absolutePostUrl }}",
-			"url": "{{ absolutePostUrl }}",
+			"id": "https://www.raymondcamden.com/2023/03/21/adobe-firefly-in-beta",
+			"url": "https://www.raymondcamden.com/2023/03/21/adobe-firefly-in-beta",
 			"title": "{{ post.data.title }}",
 			"content_html": "
 			<img src="https://static.raymondcamden.com/images/2023/03/cat_paladin.jpg" alt="Cat paladin" class="lazyload imgborder imgcenter">",
