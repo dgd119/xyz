@@ -21,7 +21,9 @@ permalink: /feed/feed.xml
 		<link href="{{ absolutePostUrl }}"/>
 		<updated>{{ post.date | dateToRfc3339 }}</updated>
 		<id>{{ absolutePostUrl }}</id>
-		<content type="html">{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) }}</content>
+		<content type="html">{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) }}
+		<img src="https://static.raymondcamden.com/images/2023/03/cat_paladin.jpg" alt="Cat paladin" class="lazyload imgborder imgcenter">
+		</content>
 	</entry>
 	{%- endfor %}
 </feed>
