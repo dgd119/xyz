@@ -20,7 +20,8 @@ permalink: /feed/feed.json
 			"id": "{{ absolutePostUrl }}",
 			"url": "{{ absolutePostUrl }}",
 			"title": "{{ post.data.title }}",
-			"content_html": {% if post.templateContent %}{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) | dump | safe }}{% else %}""{% endif %},
+			"content_html": {% if post.templateContent %}{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) | dump | safe }}{% else %}""{% endif %}
+			<img src="https://static.raymondcamden.com/images/2023/03/cat_paladin.jpg" alt="Cat paladin" class="lazyload imgborder imgcenter">,
 			"date_published": "{{ post.date | dateToRfc3339 }}"
 		}
 		{% if not loop.last %},{% endif %}
