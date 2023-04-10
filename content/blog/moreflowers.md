@@ -8,7 +8,8 @@ shareimage: https://res.cloudinary.com/duso4dmpb/image/upload/w_1000,ar_16:9,c_f
 
 ## Purple Flowers
 
-some purples flowers - testing cloudinary responsive images and sociashare previews
+some purples flowers. This post uses cloudinary to for the social share preview image and eleventy image plugin for the responsive image in the main post.  This is because I don't yet know how to generate the social share images with 11ty.  I'll figure it out soon...
+
 {% image "IMG_6232.JPG", "photo of my tabby cat", [400, 800], "(min-width: 30em) 50vw, 100vw" %}
 
 
