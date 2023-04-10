@@ -3,7 +3,7 @@ title: here are some flowers
 description: test post for previews with social images
 date: 2023-04-09
 tags: flowers
-shareimage: "./IMG_6055.png"
+shareimage: "IMG_6055.png"
 
 ---
 test post to check if images are showing in the rss feed
