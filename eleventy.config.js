@@ -24,6 +24,7 @@ module.exports = function(eleventyConfig) {
 	// App plugins
 	eleventyConfig.addPlugin(require("./eleventy.config.drafts.js"));
 	eleventyConfig.addPlugin(require("./eleventy.config.images.js"));
+	eleventyConfig.addPlugin(require("./eleventy.config.socialshare.js"))
 
 	// Official plugins
 	eleventyConfig.addPlugin(pluginRss);
