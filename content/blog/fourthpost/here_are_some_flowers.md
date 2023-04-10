@@ -1,6 +1,6 @@
 ---
 title: here are some flowers
-description: test post to look for images in rss feed
+description: test post for previews with social images
 date: 2023-04-09
 tags: flowers
 thumbnail: ./IMG_6055.png
