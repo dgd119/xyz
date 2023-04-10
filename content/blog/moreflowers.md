@@ -9,7 +9,7 @@ shareimage: https://res.cloudinary.com/duso4dmpb/image/upload/w_1000,ar_16:9,c_f
 ## Purple Flowers
 
 some purples flowers - testing cloudinary responsive images and sociashare previews
-{% image "IMG_6232.JPG", "photo of my tabby cat", [400, 800, 1280], "(min-width: 30em) 50vw, 100vw" %}
+{% image "IMG_6232.JPG", "photo of my tabby cat", [400, 800], "(min-width: 30em) 50vw, 100vw" %}
 
 
 
