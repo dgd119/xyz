@@ -7,6 +7,25 @@ const pluginBundle = require("@11ty/eleventy-plugin-bundle");
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
+const Image = require("@11ty/eleventy-img");
+async function shareImageShortcode(src) {
+  // src might be small.png - taken from frontmatter
+  const { url } = this.page;
+  // url might be /blog/hello-world/
+  const imageSrc = "." + url + src;
+  let metadata = await Image(imageSrc, {
+    widths: [600],
+    formats: ["jpeg"],
+    urlPath: url,
+    outputDir: `./_site/${url}`,
+  });
+
+  const data = metadata.jpeg[0];
+  // data.url might be /blog/hello-world/xfO_genLg4-600.jpeg
+  // note the filename is a content hash-width combination
+  return data.url;
+}
+
 module.exports = function(eleventyConfig) {
 	// Copy the contents of the `public` folder to the output folder
 	// For example, `./public/css/` ends up in `_site/css/`
@@ -74,6 +93,15 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
 		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
 	});
+	
+	eleventyConfig.addNunjucksAsyncShortcode(
+    "shareImageUri",
+    shareImageShortcode
+  );
+
+  return {
+    markdownTemplateEngine: "njk",
+  };
 
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
