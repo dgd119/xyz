@@ -10,7 +10,7 @@ shareimage: https://res.cloudinary.com/duso4dmpb/image/upload/w_1000,ar_16:9,c_f
 
 some purples flowers - testing cloudinary responsive images and sociashare previews
  
-{% image "IMG_6232.JPG", "Photo of some purple flowers" %}
+{% image "IMG_6232.JPG", "Photo of some purple flowers", "(min-width: 30em) 50vw, 100vw" %}
 
 
 
