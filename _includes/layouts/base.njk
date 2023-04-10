@@ -11,7 +11,7 @@
 		<meta property="og:url" content="{{ page.url }}" />
  		<meta property="og:type" content="article" />
 	{% if shareimage %}
-    <meta property="og:image" content="https://avatars.githubusercontent.com/u/26069270?s=40&v=4" />
+    <meta property="og:image" content="{% shareImageUri shareimage %}" />
   {% endif %}
 
 
