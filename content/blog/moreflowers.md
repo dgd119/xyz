@@ -9,8 +9,7 @@ shareimage: https://res.cloudinary.com/duso4dmpb/image/upload/w_1000,ar_16:9,c_f
 ## Purple Flowers
 
 some purples flowers - testing cloudinary responsive images and sociashare previews
- 
-    <img
+<img
     	sizes="(min-width: 30em) 28em, 100vw"
     	srcset="https://res.cloudinary.com/eeeps/image/upload/f_auto,q_70,w_256/on_the_phone.jpg 256w,
     	        https://res.cloudinary.com/eeeps/image/upload/f_auto,q_70,w_512/on_the_phone.jpg 512w,
