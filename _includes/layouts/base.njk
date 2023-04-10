@@ -8,7 +8,7 @@
 		
 		<meta property="og:description" content="{{description or medata.description}}" />
 		<meta property="og:url" content="{{ page.url }}" />
-		<meta property="og:image" content="/static/img/logo.png" />
+		<meta property="og:image" content="{{% image "./logo.png" %}}" />
 
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
