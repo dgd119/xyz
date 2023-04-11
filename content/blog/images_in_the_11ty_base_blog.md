@@ -3,6 +3,7 @@ title: images in the eleventy base blog
 description: a simple way to work with images in the 11ty base blog
 date: 2023-04-11
 shareimage: "https://res.cloudinary.com/duso4dmpb/image/upload/c_thumb,w_200,g_face/v1681126644/IMG_6055_q2dimd.png"
+shareimage2: "IMG_6232.JPG"
 tags:
   - 11ty
 ---
