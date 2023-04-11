@@ -9,8 +9,8 @@ async function shareImageShortcode(src) {
   let metadata = await Image(imageSrc, {
     widths: [600],
     formats: ["jpeg"],
-    urlPath: "/img/",
-    // outputDir: "./img/",
+    //urlPath: "/img/",
+    outputDir: "./content/blog/",
   });
 
   const data = metadata.jpeg[0];
