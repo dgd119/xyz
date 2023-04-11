@@ -14,7 +14,7 @@ The base blog image is 350px so my first thought was simply to resize my images 
 The possum post has this code to display the possum image.
 
 ```diff-js
-{% image "./possum.png", "A possum parent and two possum kids hanging from the iconic red balloon" %}
+{% raw %} {% image "./possum.png", "A possum parent and two possum kids hanging from the iconic red balloon" %} {% endraw %}
 ```
 This calls the image shortcode which generates a possum image and returns the html code to display it.  The image shortcode will accept a width, but as the possum image is already a good size there is no need to pass a width and the shortcode defaults to creating an image of the orginal width.  This works nicely for the possum image!
 
