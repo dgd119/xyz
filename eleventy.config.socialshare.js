@@ -16,6 +16,8 @@ async function shareImageShortcode(src) {
   const data = metadata.jpeg[0];
   // data.url might be /blog/hello-world/xfO_genLg4-600.jpeg
   // note the filename is a content hash-width combination
+	console.log("here is the data url);
+	console.log(data.url);
   return data.url;
 }
 
