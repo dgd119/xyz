@@ -18,13 +18,13 @@ The possum post has this code to display the possum image.
 ```
 This calls the image shortcode which generates a possum image and returns the html code to display it.  The image shortcode will accept a width, but as the possum image is already a good size there is no need to pass a width and the shortcode defaults to creating an image of the orginal width.  This works nicely for the possum image!
 
-If you image is larger you will need to pass a width.  To create a 350px width image from a larger image of a cat for example you could use the following:
+If you image is larger you will need to pass a width.  To create a 350px width image from a larger image for example you could use the following:
 
 ```diff-js
 {% raw %} {% image "./purpleflowers.png", [350], "purple flowers" %} {% endraw %}
 ```
 
-But it turns out 350px is not the ideal image width for the base blog.  It works well for the possum image because it has a transparent background and looks of off-centre.  But a regular 350px image will be off centre and look small on most devices.  Instead I created an 800px image.
+But it turns out 350px is not the ideal image width for the base blog.  It works well for the possum image because it has a transparent background and looks ok off-centre.  But a regular 350px image will be off centre and look small on most devices.  Instead I created an 800px image.
 
 ```diff-js
 {% raw %} {% image "./purpleflowers.png", [800], "purple flowers" %} {% endraw %}
@@ -37,6 +37,8 @@ img {
   height: auto;
 }
 ``````
-{% raw %} {% image "./purpleflowers.png", [800], "purple flowers" %} {% endraw %}
+Here is the image:
+
+{% image "./purpleflowers.png", [800], "purple flowers" %}
 
 This seems to be working ok so far for my modest image requirements.
