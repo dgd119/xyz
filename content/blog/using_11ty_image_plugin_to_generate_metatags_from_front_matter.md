@@ -4,8 +4,7 @@ description: how to generate open graph image metatags for 11ty base blog using 
 date: 2023-04-11
 postimage: "./IMG_6252.JPG" 
 tags:
-  - second 11ty
- 
+  - 11ty
 ---
 The 11ty base blog comes with the image plugin up and running as described a [previous post](https://davidevans.xyz/blog/images_in_the_11ty_base_blog/).  With a few
 hacks you can use it to generate metatags.  I wanted to do this in order to generate social share previews in mastadon.  I'm sure there are other reasons why it might be useful too.  Here's what you need to do.
@@ -55,7 +54,7 @@ module.exports = eleventyConfig => {
 ## check for front matter in the base.njk template and use the shortcode if a postimage exists.
 
 
-```
+```js
 {% raw %}
 {% if postimage %}
     <meta property="og:image" content="{% image2 postimage %}" />
