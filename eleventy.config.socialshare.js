@@ -1,36 +1,35 @@
-const Image = require("@11ty/eleventy-img");
 const path = require("path");
+const eleventyImage = require("@11ty/eleventy-img");
 
+module.exports = eleventyConfig => {
+	function relativeToInputPath(inputPath, relativeFilePath) {
+		let split = inputPath.split("/");
+		split.pop();
 
-async function shareImageShortcode(src) {
-  // src might be small.png - taken from frontmatter
-  const { url } = this.page;
-  // url might be /blog/hello-world/
-  const imageSrc = "./content/blog/" + src;
-	// const imageSrc = "./blog/fourthpost/IMG_6055.png"
-  let metadata = await Image(imageSrc, {
-    widths: [600],
-    formats: ["jpeg"],
-    urlPath: "/img/",
-    outputDir: "./img/",
-		// outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
-  });
+		return path.resolve(split.join(path.sep), relativeFilePath);
+	}
 
-  const data = metadata.jpeg[0];
-  // data.url might be /blog/hello-world/xfO_genLg4-600.jpeg
-  // note the filename is a content hash-width combination
-	console.log("here is the data url");
-	console.log(data.url);
-  return data.url;
-}
+	// Eleventy Image shortcode
+	// https://www.11ty.dev/docs/plugins/image/
+	eleventyConfig.addAsyncShortcode("image2", async function imageShortcode(src, alt, widths, sizes) {
+		// Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
+		// Warning: Avif can be resource-intensive so take care!
+		let formats = ["jpeg"];
+		let file = relativeToInputPath(this.page.inputPath, src);
+		let metadata = await eleventyImage(file, {
+			widths: widths || ["auto"],
+			formats,
+			outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
+		});
+		const data = metadata.jpeg[0];
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addNunjucksAsyncShortcode(
-    "shareImageUri",
-    shareImageShortcode
-  );
-
-  return {
-    markdownTemplateEngine: "njk",
-  };
+		// TODO loading=eager and fetchpriority=high
+		let imageAttributes = {
+			alt,
+			sizes,
+			loading: "lazy",
+			decoding: "async",
+		};
+		 return data.url;
+	});
 };
