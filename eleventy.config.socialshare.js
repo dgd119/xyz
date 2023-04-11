@@ -1,29 +1,29 @@
-const Image = require("@11ty/eleventy-img");
+const path = require("path");
+const eleventyImage = require("@11ty/eleventy-img");
 
-async function shareImageShortcode(src) {
-  // src might be small.png - taken from frontmatter
-  const { url } = this.page;
-  // url might be /blog/hello-world/
-  // const imageSrc = "." + url + src;
-	const imageSrc = "./blog/fourthpost/IMG_6055.png"
-  let metadata = await Image(imageSrc, {
-    widths: [600],
-    formats: ["jpeg"],
-    urlPath: url,
-    outputDir: `./_site/${url}`,
-  });
+module.exports = eleventyConfig => {
+	function relativeToInputPath(inputPath, relativeFilePath) {
+		let split = inputPath.split("/");
+		split.pop();
 
-  const data = metadata.jpeg[0];
-  // data.url might be /blog/hello-world/xfO_genLg4-600.jpeg
-  // note the filename is a content hash-width combination
-  return data.url;
-}
+		return path.resolve(split.join(path.sep), relativeFilePath);
+	}
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addNunjucksAsyncShortcode(
-    "shareImageUri",
-    shareImageShortcode
-  );
+	// Eleventy Image shortcode
+	// https://www.11ty.dev/docs/plugins/image/
+	eleventyConfig.addAsyncShortcode("image2", async function imageShortcode(src) {
+		// Full list of formats here: https://www.11ty.dev/docs/plugins/image/#output-formats
+		// Warning: Avif can be resource-intensive so take care!
+		let formats = ["jpeg"];
+		let file = relativeToInputPath(this.page.inputPath, src);
+		let metadata = await eleventyImage(file, {
+			widths: [600],
+			formats,
+			outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
+		});
+			const data = metadata.jpeg[0];
 
- 
+		
+		 return data.url;
+	});
 };
