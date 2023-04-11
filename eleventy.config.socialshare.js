@@ -2,7 +2,7 @@ const Image = require("@11ty/eleventy-img");
 const path = require("path");
 
 
-async function shareImageShortcode(src) {
+async function eleventyConfig.shareImageShortcode(src) {
   // src might be small.png - taken from frontmatter
   const { url } = this.page;
   // url might be /blog/hello-world/
