@@ -96,6 +96,11 @@ main :first-child {
 	margin-top: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
 	border-bottom: 1px dashed var(--color-gray-20);
 }
