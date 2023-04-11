@@ -21,7 +21,7 @@ module.exports = eleventyConfig => {
 			formats,
 			outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
 		});
-		const data = metadata.jpeg[0];
+			const data = metadata.jpeg[0];
 
 		
 		 return data.url;
