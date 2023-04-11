@@ -23,13 +23,7 @@ module.exports = eleventyConfig => {
 		});
 		const data = metadata.jpeg[0];
 
-		// TODO loading=eager and fetchpriority=high
-		let imageAttributes = {
-			alt,
-			sizes,
-			loading: "lazy",
-			decoding: "async",
-		};
+		
 		 return data.url;
 	});
 };
