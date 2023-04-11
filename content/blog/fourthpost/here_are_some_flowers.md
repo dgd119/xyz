@@ -9,7 +9,7 @@ postimage: "./possum.png"
 test post to get social media previews working
 
 
-{% image postimage, "some spring flowers" %}
+{% image "IMG_6055.png", "some spring flowers" %}
 
 ## Spring Flowers
 
