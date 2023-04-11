@@ -62,4 +62,4 @@ module.exports = eleventyConfig => {
   {% endif %}
 {% endraw %}
 ```
-Most of this code is straight from the 11ty baseblog.  I've just hacked it to take less inputs and output the data required for the metatag. Big thanks to [TJAddison](https://tjaddison.com/blog/2022/08/processing-images-linked-from-frontmatter-with-eleventy-img-to-use-in-meta-tags/) for pointing me in the right direction.  It would have taken me even longer if I'd not found this helpful post..
+Most of the shortcode is straight from the 11ty baseblog.  I've just hacked it to take less inputs and output the data required for the metatag. Big thanks to [TJAddison](https://tjaddison.com/blog/2022/08/processing-images-linked-from-frontmatter-with-eleventy-img-to-use-in-meta-tags/) for pointing me in the right direction.  It would have taken me even longer if I'd not found this helpful post..
