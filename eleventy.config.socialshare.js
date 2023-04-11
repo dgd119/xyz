@@ -10,7 +10,7 @@ async function shareImageShortcode(src) {
     widths: [600],
     formats: ["jpeg"],
     urlPath: url,
-    outputDir: `./${url}`,
+    outputDir: "./img/",
   });
 
   const data = metadata.jpeg[0];
