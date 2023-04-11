@@ -25,7 +25,5 @@ module.exports = function (eleventyConfig) {
     shareImageShortcode
   );
 
-  return {
-    markdownTemplateEngine: "njk",
-  };
+ 
 };
