@@ -10,8 +10,8 @@
 		<meta property="og:description" content="{{description or medata.description}}" />
 		<meta property="og:url" content="{{ page.url }}" />
  		<meta property="og:type" content="article" />
-	{% if shareimage %}
-    <meta property="og:image" content="{{ shareimage }}" />
+	{% if shareimage2 %}
+    <meta property="og:image" content="{% shareImageUri shareimage2 %}" />
   {% endif %}
 
 
