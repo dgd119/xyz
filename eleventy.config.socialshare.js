@@ -1,4 +1,6 @@
 const Image = require("@11ty/eleventy-img");
+const path = require("path");
+
 
 async function shareImageShortcode(src) {
   // src might be small.png - taken from frontmatter
@@ -10,7 +12,8 @@ async function shareImageShortcode(src) {
     widths: [600],
     formats: ["jpeg"],
     urlPath: "/content/blog/",
-    outputDir: "./content/blog/",
+    //outputDir: "./content/blog/",
+		outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
   });
 
   const data = metadata.jpeg[0];
