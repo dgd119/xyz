@@ -11,8 +11,8 @@ async function shareImageShortcode(src) {
   let metadata = await Image(imageSrc, {
     widths: [600],
     formats: ["jpeg"],
-    urlPath: "/content/blog/",
-    outputDir: "./content/blog/",
+    urlPath: "/img/",
+    outputDir: "./img/",
 		// outputDir: path.join(eleventyConfig.dir.output, "img"), // Advanced usage note: `eleventyConfig.dir` works here because we’re using addPlugin.
   });
 
