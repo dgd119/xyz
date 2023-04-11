@@ -21,13 +21,13 @@ This calls the image shortcode which generates a possum image and returns the ht
 If you image is larger you will need to pass a width.  To create a 350px width image from a larger image for example you could use the following:
 
 ```diff-js
-{% raw %} {% image "./purpleflowers.png", [350], "purple flowers" %} {% endraw %}
+{% raw %} {% image "./purpleFlowers.png", "some purple flowers", [350] %} {% endraw %}
 ```
 
 But it turns out 350px is not the ideal image width for the base blog.  It works well for the possum image because it has a transparent background and looks ok off-centre.  But a regular 350px image will be off centre and look small on most devices.  Instead I created an 800px image.
 
 ```diff-js
-{% raw %} {% image "./purpleflowers.png", [800], "purple flowers" %} {% endraw %}
+{% raw %} {% image "./purpleFlowers.png", "some purple flowers", [800] %} {% endraw %}
 ``````
 This will be too big on some devices so I set a max width in the css.
 
@@ -39,6 +39,6 @@ img {
 ``````
 Here is the image:
 
-{% image "./IMG_6232.JPG", [800], "purple flowers" %}
+{% image "IMG_6232.JPG", "some purple flowers", [800] %}
 
 This seems to be working ok so far for my modest image requirements.
