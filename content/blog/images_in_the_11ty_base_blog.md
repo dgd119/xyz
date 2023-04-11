@@ -39,6 +39,6 @@ img {
 ``````
 Here is the image:
 
-{% image "./purpleflowers.png", [800], "purple flowers" %}
+{% image "./IMG_6232.JPG", [800], "purple flowers" %}
 
 This seems to be working ok so far for my modest image requirements.
