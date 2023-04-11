@@ -1,5 +1,5 @@
 ---
-title: Using 11ty image plugibn to generate metatags from front matter
+title: Using 11ty image plugin to generate metatags from front matter
 description: how to generate open graph image metatags for 11ty base blog using the 11ty image plugin
 date: 2023-04-11
 postimage: "./IMG_6252.JPG" 
