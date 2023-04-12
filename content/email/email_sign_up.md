@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.njk
 eleventyNavigation:
-  key: email sign up
+  key: Email Sign Up
   order: 3
 ---
-# Email sign up
+# Email Sign Up
 
 sign up for regular indie web emails
 
