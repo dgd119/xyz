@@ -8,7 +8,7 @@ eleventyNavigation:
 
 <form
   action="
-    https://buttondown.email/api/emails/embed-subscribe/<your username>
+    https://buttondown.email/api/emails/embed-subscribe/devansxyz
   "
   method="post"
   target="popupwindow"
