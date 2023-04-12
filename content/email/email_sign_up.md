@@ -4,7 +4,9 @@ eleventyNavigation:
   key: email sign up
   order: 3
 ---
-# Contact
+# Email sign up
+
+sign up for regular indie web emails
 
 <form
   action="
