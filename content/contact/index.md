@@ -6,18 +6,35 @@ eleventyNavigation:
 ---
 # Contact
 
-<form class="form" name="contact" action="/success" method="POST" data-netlify="true">
-  <div class="form__section">
-    <label class="form__label" for="yourName">Name</label>
-    <input class="form__input" name="name" type="text" id="yourName" required="true">
-  </div>
-  <div class="form__section">
-    <label class="form__label" for="yourEmail">Email</label>
-    <input class="form__input" name="email" type="email"  id="yourEmail" required="true">
-  </div>
-  <div class="form__section">
-    <label class="form__label" for="message">Message</label>
-    <textarea class="form__input" name="message" id="message" rows="4" required="true"></textarea>
-  </div>
-    <button class="form__button" type="submit">Let's talk</button>
-</form>
+<div style="font-family: Roboto; border-radius: 5px; padding: 1px 30px; width: 75%;">
+   <h2 style="font-size:30px">Contact Us</h2>
+   <form accept-charset="UTF-8" action="https://getform.io/f/{your-form-endpoint-goes-here}" method="POST" enctype="multipart/form-data"  target="_blank" id="wpform">
+      <div>
+         <label>Full Name</label>
+         <div>
+            <input style="margin-top: 5px; background-color: #fff; height:35px; width:235px;" type="text" name="first_name" placeholder="Enter your name and surname" required="required">
+         </div>
+      </div>
+      <br>
+      <div>
+         <label>Email address</label>
+         <div>
+            <input style="margin-top: 5px;background-color: #fff; height:35px; width:235px;" type="email" name="email" placeholder="Enter your email address" required="required">
+         </div>
+      </div>
+      <br>
+      <div>
+         <label>Your Message</label>
+         <div>
+            <textarea style="margin-top: 5px;background-color: #fff; height:50px; width:235px;" type="text" name="message" placeholder="Enter your message" required="required"></textarea>
+         </div>
+      </div>
+      <div>
+         <label>Upload document:</label>
+         <input type="file" name="file" required="required">
+      </div>
+      <br>
+      <input type="hidden" name="utf8" value="✓">
+      <button style="font-size:14px; background-color:#6b7ddf; color:#fff; font-weight:bold; padding:10px 35px; margin: 5px 0 0 0;" type="submit">SUBMIT</button>
+   </form>
+</div>
