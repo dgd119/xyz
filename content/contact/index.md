@@ -6,9 +6,8 @@ eleventyNavigation:
 ---
 # Contact
 
-<div style="font-family: Roboto; border-radius: 5px; padding: 1px 30px; width: 75%;">
-   <h2 style="font-size:30px">Contact Us</h2>
-   <form accept-charset="UTF-8" action="https://getform.io/f/{your-form-endpoint-goes-here}" method="POST" enctype="multipart/form-data"  target="_blank" id="wpform">
+<div style="border-radius: 5px; padding: 1px 30px; width: 75%;">
+   <form accept-charset="UTF-8" action="/success" method="POST" data-netlify="true">
       <div>
          <label>Full Name</label>
          <div>
