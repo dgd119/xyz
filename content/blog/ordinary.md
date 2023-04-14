@@ -1,5 +1,5 @@
 ---
-title: on being ordinary
+title: back to the board
 description: on being ordinary
 date: 2023-04-14
 postimage: "./IMG_6336.jpg"
