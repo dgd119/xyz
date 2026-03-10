@@ -4,6 +4,5 @@ eleventyNavigation:
   key: About
   order: 4
 ---
-# Email Sign Up
+# About David
 
-About David
